@@ -21,8 +21,8 @@ let time = 0;
 let btnClick = 0;
 
 function startGame(){
-    gameField.innerHTML = "";
     bg.play();
+    gameField.innerHTML = "";
     createImage();
     time = setInterval("timer()", 1000);
     gameBtn.innerHTML = `<i class="fas fa-stop-circle"></i>`
@@ -61,7 +61,6 @@ function createPopUp(){
         window.location.reload();
         startGame();
     })
-    popUpText.innerText = "";
     screen.appendChild(popUp);
 }
 
@@ -71,17 +70,17 @@ function popUpReplay(){
 }
 
 function popUpWin(){
-    createPopUp();
-    popUpText.innerText = "Congrats!🎉";
     bg.pause();
     winSound.play();
+    createPopUp();
+    popUpText.innerText = "Congrats!🎉";
 }
 
 function popUpLost(){
-    createPopUp();
-    popUpText.innerText = "You lose~🙉";
     bg.pause();
     bugSound.play();
+    createPopUp();
+    popUpText.innerText = "You lose~🙉";
 }
 
 function createImage(){
