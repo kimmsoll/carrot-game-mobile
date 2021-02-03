@@ -1,0 +1,131 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  font-family: 'Fredoka One', cursive;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+}
+
+h1 {
+  margin: 30px;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.screen {
+  width: 350px;
+  height: 600px;
+  background: url(images/bg.png);
+  background-size: cover;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes scaleBtn {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.header__gameBtn {
+  width: 80px;
+  height: 80px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 60px;
+  text-align: center;
+  background-color: none;
+  color: black;
+  cursor: pointer;
+  animation: scaleBtn 1s linear infinite;
+}
+
+.header__gameTimer {
+  width: 120px;
+  padding: 5px 0px;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.header__gameScore {
+  width: 50px;
+  height: 50px;
+  padding-top: 8px;
+  box-sizing: border-box;
+  font-size: 35px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: tomato;
+  color: white;
+}
+
+.bug {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
+.carrot {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.gameField {
+  width: 250px;
+  height: 320px;
+  margin-top: 80px;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.pop-up {
+  width: 300px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 25px;
+  margin-top: -40px;
+}
+
+.pop-up__button {
+  font-size: 40px;
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.pop-up__text {
+  font-size: 25px;
+  color: pink;
+}
