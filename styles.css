@@ -82,19 +82,19 @@ h1 {
 }
 
 .bug {
-  width: 90px;
-  height: 90px;
-  cursor: pointer;
-}
-
-.carrot {
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
 
+.carrot {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
 .gameField {
-  width: 250px;
+  width: 350px;
   height: 320px;
   margin-top: 80px;
   box-sizing: border-box;
