@@ -89,19 +89,7 @@ function createImage(){
         carrot[i].src = "images/carrot.png";
         carrot[i].setAttribute("class", "carrot");
         gameField.appendChild(carrot[i]);
-        carrot[i].addEventListener("click", ()=>{
-            gameField.removeChild(carrot[i]);
-            if(true){
-                carrotSound.play();
-                score = score - 1;
-                gameScore.innerHTML = score;
-                if(score <= 0){
-                    stopGame();
-                    popUpWin();
-                }
-            }
-        });
-        
+                
         bug[i] = document.createElement("img");
         bug[i].src = "images/bug.png";
         bug[i].setAttribute("class", "bug");
@@ -119,12 +107,30 @@ function createImage(){
         availSpace_V = fieldW - carrotW;
         availSpace_H = fieldH - carrotH;
     }
-    moveImage();    
+    moveImage();
+    catchCarrot();    
 }
 
 function moveImage(){    
     for(let i=0; i<=2; i++){
     carrot[i].style.transform = `translate(${Math.round(Math.random() * availSpace_H) + "px"}, ${Math.round(Math.random() * availSpace_V) + "px"})`;
     bug[i].style.transform = `translate(${Math.round(Math.random() * availSpace_H) + "px"}, ${Math.round(Math.random() * availSpace_V) + "px"})`;
+}
+}
+
+function catchCarrot(){
+for(let i=0; i<=2; i++){
+    carrot[i].addEventListener("click", ()=>{
+        gameField.removeChild(carrot[i]);
+        if(true){
+            carrotSound.play();
+            score = score - 1;
+            gameScore.innerHTML = score;
+            if(score <= 0){
+                stopGame();
+                popUpWin();
+            }
+        }
+    })
 }
 }
