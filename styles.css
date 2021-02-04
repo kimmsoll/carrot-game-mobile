@@ -81,15 +81,8 @@ h1 {
   color: white;
 }
 
-.bug {
-  width: 90px;
-  height: 90px;
-  cursor: pointer;
-}
-
+.bug,
 .carrot {
-  width: 100px;
-  height: 100px;
   cursor: pointer;
 }
 
